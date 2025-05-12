@@ -1,8 +1,8 @@
 # 👋 Hi, I’m @riandoza
 
-👀 I’m interested in Software development, IoT, AI
-Expert in managing Ubuntu, CentOS, and Debian systems for server production. Containers virtualized with Docker, Developing in VS-Code.
-💞️ I’m looking to collaborate on Coding, DevOps, SysAdmin
+- 👀 I’m interested in Software development, IoT, AI
+- Expert in managing Ubuntu, CentOS, and Debian systems for server production. Containers virtualized with Docker, Developing in VS-Code.
+- 💞️ I’m looking to collaborate on Coding, DevOps, SysAdmin
 
 ## 📊 WakaTime Stats
 
