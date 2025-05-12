@@ -1,8 +1,10 @@
 # 👋 Hi, I’m @riandoza
-
+A passionate full-stack developer from Indonesia
+- 🔭 I’m currently working as Freelancer
 - 👀 I’m interested in Software development, IoT, AI
-- Expert in managing Ubuntu, CentOS, and Debian systems for server production. Containers virtualized with Docker, Developing in VS-Code.
-- 💞️ I’m looking to collaborate on Coding, DevOps, SysAdmin
+- 👯 I’m looking to collaborate on Coding, DevOps, SysAdmin
+
+Expert in managing Ubuntu, CentOS, and Debian systems for server production. Containers virtualized with Docker, Developing in VS-Code.
 
 ## 📊 WakaTime Stats
 
