@@ -1,8 +1,8 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
-// Deployed to GitHub Pages as a user site at the root domain.
-// No `base` needed since it serves from https://riandoza.github.io
+// Deployed to GitHub Pages from riandoza/riandoza as a project page.
 export default defineConfig({
   site: 'https://riandoza.github.io',
+  base: '/riandoza',
 });
