@@ -1,0 +1,115 @@
+---
+import { socials, profile } from '../data/portfolio';
+import Social from './Social.astro';
+
+const email = socials.find((s) => s.icon === 'mail')?.url.replace('mailto:', '');
+---
+
+<section id="contact">
+  <div class="container">
+    <div class="contact-card reveal">
+      <p class="eyebrow">04 — Contact</p>
+      <h2 class="section-title">
+        Let's <span class="accent">build something</span>
+      </h2>
+      <p class="contact-lead">
+        I'm open to freelance work, collaboration on open source, and DevOps
+        consulting. Got a project or just want to say hi? My inbox is always open.
+      </p>
+
+      {
+        email && (
+          <a class="email-btn" href={`mailto:${email}`}>
+            {email}
+          </a>
+        )
+      }
+
+      <div class="socials">
+        {socials.map((s) => <Social social={s} />)}
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© {new Date().getFullYear()} {profile.name}. Built with Astro.</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+</section>
+
+<style>
+  #contact {
+    padding-bottom: 0;
+  }
+  .contact-card {
+    text-align: center;
+    max-width: 640px;
+    margin-inline: auto;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .contact-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      closest-side at 50% 0%,
+      rgba(56, 189, 248, 0.12),
+      transparent
+    );
+    pointer-events: none;
+  }
+  .contact-card .eyebrow {
+    margin-bottom: 0.75rem;
+  }
+  .contact-lead {
+    color: var(--text-muted);
+    margin: 1rem auto 2rem;
+    max-width: 50ch;
+  }
+  .email-btn {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: 0.85rem 1.75rem;
+    border-radius: 99px;
+    background: var(--gradient);
+    color: #05080f;
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+    margin-bottom: 2rem;
+  }
+  .email-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px -10px var(--accent-glow);
+  }
+  .socials {
+    display: flex;
+    gap: 0.85rem;
+    justify-content: center;
+  }
+
+  .footer {
+    margin-top: 5rem;
+    border-top: 1px solid var(--border-soft);
+    padding-block: 1.75rem;
+  }
+  .footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-size: 0.88rem;
+    color: var(--text-dim);
+  }
+  .footer-inner a:hover {
+    color: var(--accent);
+  }
+</style>

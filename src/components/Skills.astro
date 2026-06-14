@@ -1,0 +1,87 @@
+---
+import { skillCategories } from '../data/portfolio';
+---
+
+<section id="skills">
+  <div class="container">
+    <p class="eyebrow reveal">02 — Skills</p>
+    <h2 class="section-title reveal">
+      Tech <span class="accent">stack & tools</span>
+    </h2>
+    <p class="section-subtitle reveal">
+      The technologies I reach for across full-stack development, infrastructure,
+      and everything in between.
+    </p>
+
+    <div class="grid">
+      {
+        skillCategories.map((cat) => (
+          <article class="cat reveal">
+            <header>
+              <span class="cat-icon">{cat.icon}</span>
+              <h3>{cat.title}</h3>
+            </header>
+            <ul>
+              {cat.skills.map((s) => (
+                <li>{s}</li>
+              ))}
+            </ul>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.25rem;
+  }
+  .cat {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .cat:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px -20px var(--accent-glow);
+  }
+  .cat header {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 1.1rem;
+  }
+  .cat-icon {
+    font-size: 1.4rem;
+  }
+  .cat h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+  }
+  .cat ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .cat li {
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    background: var(--bg-soft);
+    border: 1px solid var(--border-soft);
+    padding: 0.35rem 0.7rem;
+    border-radius: 8px;
+    transition: all 0.18s ease;
+  }
+  .cat li:hover {
+    color: var(--text);
+    border-color: var(--accent);
+  }
+</style>
